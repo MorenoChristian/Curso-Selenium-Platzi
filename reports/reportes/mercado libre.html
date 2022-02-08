@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Result</h2>
+                <p class='attribute'><strong>Start Time: </strong>2021-11-07 15:29:40</p>
+                <p class='attribute'><strong>Duration: </strong>21.929s</p>
+                <p class='attribute'><strong>Status: </strong>Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>reportes</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class='warning'>
+                                <td class="col-xs-9">test_country (__main__.MercadoTest)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-warning">
+                                        
+                                            Error
+                                        
+                                    </span>
+                                    
+                                        &nbsp<button class="btn btn-default btn-xs">View</button>
+                                    
+                                </td>
+                            </tr>
+                            
+                                <tr style="display:none;">
+                                    <td class="col-xs-9">
+                                        <p>NoSuchElementException</p>
+                                        <p>Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/main/div/div/section/ol/li[1]/div/div/div[2]/div[1]/a/h2"}
+  (Session info: chrome=95.0.4638.69)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B4BDE3+2473443]
+	Ordinal0 [0x00AE6661+2057825]
+	Ordinal0 [0x009F2438+1057848]
+	Ordinal0 [0x00A1C7DB+1230811]
+	Ordinal0 [0x00A46712+1402642]
+	Ordinal0 [0x00A3571A+1333018]
+	Ordinal0 [0x00A44ABF+1395391]
+	Ordinal0 [0x00A355AB+1332651]
+	Ordinal0 [0x00A12104+1188100]
+	Ordinal0 [0x00A12F59+1191769]
+	GetHandleVerifier [0x00CD2266+1549718]
+	GetHandleVerifier [0x00D7D4A7+2250711]
+	GetHandleVerifier [0x00BD718B+521403]
+	GetHandleVerifier [0x00BD6229+517465]
+	Ordinal0 [0x00AEB79D+2078621]
+	Ordinal0 [0x00AEFB58+2095960]
+	Ordinal0 [0x00AEFC92+2096274]
+	Ordinal0 [0x00AF9541+2135361]
+	BaseThreadInitThunk [0x760AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77277C7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77277C4E+238]
+</p>
+                                    </td>
+                                </tr>
+                            
+                        
+                        <tr>
+                            <td>
+                               Total Test Runned: 1
+                            </td>
+                            <td>
+                                <span>Error: 1</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>

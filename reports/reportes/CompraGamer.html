@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Result</h2>
+                <p class='attribute'><strong>Start Time: </strong>2021-10-16 22:34:12</p>
+                <p class='attribute'><strong>Duration: </strong>12.566s</p>
+                <p class='attribute'><strong>Status: </strong>Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>reportes</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class='warning'>
+                                <td class="col-xs-9">test_search_field (__main__.GamesFull)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-warning">
+                                        
+                                            Error
+                                        
+                                    </span>
+                                    
+                                        &nbsp<button class="btn btn-default btn-xs">View</button>
+                                    
+                                </td>
+                            </tr>
+                            
+                                <tr style="display:none;">
+                                    <td class="col-xs-9">
+                                        <p>ElementClickInterceptedException</p>
+                                        <p>Message: element click intercepted: Element <button style="height:48px;" class="product-search__btn ui-btn ui-btn_primary" id="botonBusqueda" value="..." alt="Buscar" autofocus="">Buscar</button> is not clickable at point (1208, 41). Other element would receive the click: <div id="modalNotificaciones" class="modalNotificaciones">...</div>
+  (Session info: chrome=94.0.4606.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0065BDE3+2473443]
+	Ordinal0 [0x005F6661+2057825]
+	Ordinal0 [0x00502438+1057848]
+	Ordinal0 [0x005327B9+1255353]
+	Ordinal0 [0x00530AE0+1247968]
+	Ordinal0 [0x0052E8AD+1239213]
+	Ordinal0 [0x0052D701+1234689]
+	Ordinal0 [0x00523567+1193319]
+	Ordinal0 [0x005456E3+1332963]
+	Ordinal0 [0x00523386+1192838]
+	Ordinal0 [0x005457CA+1333194]
+	Ordinal0 [0x00554ABF+1395391]
+	Ordinal0 [0x005455AB+1332651]
+	Ordinal0 [0x00522104+1188100]
+	Ordinal0 [0x00522F59+1191769]
+	GetHandleVerifier [0x007E2266+1549718]
+	GetHandleVerifier [0x0088D4A7+2250711]
+	GetHandleVerifier [0x006E718B+521403]
+	GetHandleVerifier [0x006E6229+517465]
+	Ordinal0 [0x005FB79D+2078621]
+	Ordinal0 [0x005FFB58+2095960]
+	Ordinal0 [0x005FFC92+2096274]
+	Ordinal0 [0x00609541+2135361]
+	BaseThreadInitThunk [0x765EFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x779C7C7E+286]
+	RtlGetAppContainerNamedObjectPath [0x779C7C4E+238]
+</p>
+                                    </td>
+                                </tr>
+                            
+                        
+                        <tr>
+                            <td>
+                               Total Test Runned: 1
+                            </td>
+                            <td>
+                                <span>Error: 1</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>
